@@ -10,9 +10,11 @@ class SectionController extends Controller
     //
     public function index()
     {
-        $sections = Section::all();
-        // $sections = Section::paginate(2);
+        // $sections = Section::all();
+        $sections = Section::paginate(2);
+        // $sections = Section::cursorPaginate(2);
         // dd($sections);
+
         return view('section.index', compact('sections'));
     }
 }
