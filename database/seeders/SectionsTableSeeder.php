@@ -19,6 +19,8 @@ class SectionsTableSeeder extends Seeder
         /**
          * ! instead of 'insert' use 'create' to insert updated_at and created_at fields
          */
+
+
         Section::create([
             'name' => 'math science',
             'slug' => Str::slug('math science'),
@@ -31,7 +33,7 @@ class SectionsTableSeeder extends Seeder
         ]);
         Section::create([
             'name' => 'science informatique',
-            'slug' => Str::slug('sicence informatique'),
+            'slug' => Str::slug('science informatique'),
             'description' => "Cette section se concentre sur les fondamentaux de l'informatique, incluant la programmation, les systèmes d'information et les réseaux. Les étudiants apprennent à coder dans plusieurs langages et à développer des applications logicielles. Les cours pratiques et les projets collaboratifs encouragent l'innovation et la résolution de problèmes, préparant les élèves aux carrières dans le domaine technologique."
         ]);
 
@@ -49,8 +51,8 @@ class SectionsTableSeeder extends Seeder
                 'description' => "La section Mathématiques et Physique est conçue pour les étudiants passionnés par les sciences exactes. Elle met l'accent sur les théories et les applications mathématiques ainsi que sur les principes fondamentaux de la physique. Les cours incluent des travaux pratiques en laboratoire pour illustrer les concepts physiques, favorisant une compréhension concrète et intuitive des phénomènes naturels."
             ],
             [
-                'name' => 'sicence informatique',
-                'slug' => Str::slug('sicence informatique'),
+                'name' => 'science informatique',
+                'slug' => Str::slug('science informatique'),
                 'description' => "Cette section se concentre sur les fondamentaux de l'informatique, incluant la programmation, les systèmes d'information et les réseaux. Les étudiants apprennent à coder dans plusieurs langages et à développer des applications logicielles. Les cours pratiques et les projets collaboratifs encouragent l'innovation et la résolution de problèmes, préparant les élèves aux carrières dans le domaine technologique."
             ],
         ]); */
