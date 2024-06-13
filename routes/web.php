@@ -9,8 +9,11 @@ Route::get('/', function () {
 
 Route::prefix('/section')->name('section.')->controller(SectionController::class)->group(
     function () {
-        Route::get('/', 'index')->name('all');
+        Route::get('/', 'index')->name('index');
+        Route::get('/{section:slug}', 'show')->name('show');
+        Route::get('/{section:slug}/edit', 'form')->name('form');
+        Route::get('/create', 'form')->name('form');
     }
 );
 
-Route::get('/section', [SectionController::class, 'index']);
+// Route::get('/section', [SectionController::class, 'index']);

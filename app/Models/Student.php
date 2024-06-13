@@ -14,4 +14,8 @@ class Student extends Model
         'addresse',
         'age',
     ];
+    public function section()
+    {
+        return $this->belongsTo(Section::class);
+    }
 }

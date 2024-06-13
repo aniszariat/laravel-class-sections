@@ -11,4 +11,8 @@ class Section extends Model
     protected $fillable = [
         'name', 'slug', 'description', 'updated_at'
     ];
+    public function student()
+    {
+        return $this->hasmany(Student::class);
+    }
 }

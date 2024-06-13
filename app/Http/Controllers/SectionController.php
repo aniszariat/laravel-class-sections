@@ -17,4 +17,13 @@ class SectionController extends Controller
 
         return view('section.index', compact('sections'));
     }
+    public function show(Section $section)
+    {
+        // dd($section);
+        return view('section.show', compact('section'));
+    }
+    public function form()
+    {
+        return view('section.form');
+    }
 }

@@ -20,7 +20,11 @@
 </head>
 
 <body>
-    @include('_partials/navbar')
+    @php
+        $routeName = request()->route()->getName();
+    @endphp
+    @include('_partials/navbar', ['routeName' => $routeName])
+    {{-- <h1>{{ $routeName }}</h1> --}}
     <div class="container-fluid">
         @yield('content')
     </div>
