@@ -11,7 +11,7 @@ class SectionController extends Controller
     public function index()
     {
         // $sections = Section::all();
-        $sections = Section::paginate(2);
+        $sections = Section::with('student')->paginate(2);
         // $sections = Section::cursorPaginate(2);
         // dd($sections);
 
@@ -21,9 +21,5 @@ class SectionController extends Controller
     {
         // dd($section);
         return view('section.show', compact('section'));
-    }
-    public function form()
-    {
-        return view('section.form');
     }
 }
