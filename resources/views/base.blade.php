@@ -26,6 +26,14 @@
     @include('_partials/navbar', ['routeName' => $routeName])
     {{-- <h1>{{ $routeName }}</h1> --}}
     <div class="container-fluid">
+        @if (session('status'))
+            <div @class([
+                'my-3',
+                'alert',
+                'alert-success' => !str_starts_with(session('status'), 'deleted'),
+                'alert-danger' => str_starts_with(session('status'), 'deleted'),
+            ]) class="  my-3">{{ session('status') }}</div>
+        @endif
         @yield('content')
     </div>
     {{-- @include('_partials/footer') --}}

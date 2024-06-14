@@ -13,7 +13,7 @@
         </p>
 
         <p>
-            <a href="{{ route('student.create', null) }}" class="btn btn-outline-primary">ajouter un étudiant</a>
+            <a href="{{ route('student.new') }}" class="btn btn-outline-primary">ajouter un étudiant</a>
         </p>
         <table class="table">
             <thead>
